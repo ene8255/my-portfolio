@@ -3,7 +3,6 @@ import Front from '../Front';
 import About from '../About';
 import Skills from '../Skills';
 import Projects from '../Projects';
-import Contact from '../Contact';
 
 function Main() {
 
@@ -14,7 +13,6 @@ function Main() {
                 <About />
                 <Skills />
                 <Projects />
-                <Contact />
             </div>
         </main>
     );

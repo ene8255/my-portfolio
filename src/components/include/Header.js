@@ -9,7 +9,6 @@ function Header() {
                     <li>About me</li>
                     <li>Skills</li>
                     <li>Projects</li>
-                    <li>Contact</li>
                 </ul>
             </nav>
         </header>
