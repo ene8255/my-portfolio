@@ -2,14 +2,16 @@
     background-color: #f7f7f7;
     .sectionContent {
         font-size: 1.3em;
-        position: relative;
         > div {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
             padding: 10%;
         }
+    }
+    #email {
+        margin-top: 1em;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
     }
     #links {
         margin: 1em 0;
@@ -23,11 +25,5 @@
                 fill: skyblue;
             }
         }
-    }
-    #email {
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
 }

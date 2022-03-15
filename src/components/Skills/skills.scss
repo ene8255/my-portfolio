@@ -1,4 +1,85 @@
+$html: #E34F26;
+$css: #1572B6;
+$sass: #CC6699;
+$js: #F7DF1E;
+$react: #61DAFB;
+$php: #777BB4;
+$nodejs: #339933;
+$mysql: #4479A1;
+$aws: #232F3E;
+
 #skills {
-    // background-color: pink;
     background-color: #f7f7f7;
+    .sectionContent {
+        position: relative;
+    }
+    #skillCont {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            padding: 0.5em;
+            svg {
+                width: 4em;
+                height: 4em;
+                transition: 0.3s;
+            }
+            &:first-child:hover svg, &:first-child .skillName {
+                color: $html;
+            }
+            &:nth-child(2):hover svg, &:nth-child(2) .skillName {
+                color: $css;
+            }
+            &:nth-child(3):hover svg, &:nth-child(3) .skillName {
+                color: $sass;
+            }
+            &:nth-child(4):hover svg, &:nth-child(4) .skillName {
+                color: $js;
+            }
+            &:nth-child(5):hover svg, &:nth-child(5) .skillName {
+                color: $react;
+            }
+            &:nth-child(6):hover svg, &:nth-child(6) .skillName {
+                color: $nodejs;
+            }
+            &:nth-child(7):hover svg, &:nth-child(7) .skillName {
+                color: $php;
+            }
+            &:nth-child(8):hover svg, &:nth-child(8) .skillName {
+                color: $mysql;
+            }
+            &:nth-child(9):hover svg, &:nth-child(9) .skillName {
+                color: $aws;
+            }
+            &:hover .skillName {
+                opacity: 1;
+                display: inline-block;
+            }
+            &:hover .skillDesc {
+                opacity: 1;
+                display: inline-block;
+            }
+        }
+        .skillName {
+            position: absolute;
+            bottom: 65%;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: 1.5em;
+            font-weight: bold;
+            display: none;
+        }
+        .skillDesc {
+            position: absolute;
+            top: 65%;
+            right: 50%;
+            transform: translateX(50%);
+            // min-width: 55%;
+            display: none;
+            li {
+                list-style: circle;
+            }
+        }
+    }
 }
