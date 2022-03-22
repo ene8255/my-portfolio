@@ -1,7 +1,7 @@
 import React from 'react';
 import './skills.scss';
 import { IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoJavascript, IoLogoReact, IoLogoNodejs } from "react-icons/io5";
-import { SiPhp, SiMysql, SiAmazonaws } from "react-icons/si";
+import { SiPhp, SiMysql, SiAmazonaws, SiGit, SiGithub } from "react-icons/si";
 
 function Skills() {
     return (
@@ -84,6 +84,23 @@ function Skills() {
                         <p className='skillName'>AWS</p>
                         <ul className='skillDesc'>
                             <li>Amazon RDS를 사용하여 MySQL 데이터베이스를 구축하고 활용할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <SiGit />
+                        <p className='skillName'>Git</p>
+                        <ul className='skillDesc'>
+                            <li>기본적인 Git 명령어를 사용하여 프로젝트 폴더의 버전 관리를 수행할 수 있습니다.</li>
+                            <li>GitHub 원격 저장소와 연결하여 파일의 변경 사항을 commit, push, pull할 수 있습니다.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <SiGithub />
+                        <p className='skillName'>GitHub</p>
+                        <ul className='skillDesc'>
+                            <li>GitHub repository를 생성하고, 관리할 수 있습니다.</li>
+                            <li>README.md 파일을 작성할 수 있습니다.</li>
+                            <li>GitHub Pages를 사용하여 프로젝트를 배포할 수 있습니다.</li>
                         </ul>
                     </div>
                 </div>

@@ -7,6 +7,8 @@ $php: #777BB4;
 $nodejs: #339933;
 $mysql: #4479A1;
 $aws: #232F3E;
+$git: #F05032;
+$github: #181717;
 
 #skills {
     background-color: #f7f7f7;
@@ -18,8 +20,9 @@ $aws: #232F3E;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-wrap: wrap;
         div {
-            padding: 0.5em;
+            padding: 0.9em;
             svg {
                 width: 4em;
                 height: 4em;
@@ -52,6 +55,12 @@ $aws: #232F3E;
             &:nth-child(9):hover svg, &:nth-child(9) .skillName {
                 color: $aws;
             }
+            &:nth-child(10):hover svg, &:nth-child(10) .skillName {
+                color: $git;
+            }
+            &:nth-child(11):hover svg, &:nth-child(11) .skillName {
+                color: $github;
+            }
             &:hover .skillName {
                 opacity: 1;
                 display: inline-block;
@@ -63,7 +72,7 @@ $aws: #232F3E;
         }
         .skillName {
             position: absolute;
-            bottom: 65%;
+            bottom: 70%;
             right: 50%;
             transform: translateX(50%);
             font-size: 1.5em;
@@ -72,7 +81,7 @@ $aws: #232F3E;
         }
         .skillDesc {
             position: absolute;
-            top: 65%;
+            top: 70%;
             right: 50%;
             transform: translateX(50%);
             // min-width: 55%;
