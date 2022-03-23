@@ -5,7 +5,6 @@ import Skills from '../Skills';
 import Projects from '../Projects';
 
 function Main() {
-
     return (
         <main>
             <div id='main-container'>
