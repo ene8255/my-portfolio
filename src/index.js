@@ -5,10 +5,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from 'react-router-dom';
+import Restoration from './Restoration';
 
 ReactDOM.render(
   <React.StrictMode>
     <BrowserRouter>
+      <Restoration />
       <App />
     </BrowserRouter>
   </React.StrictMode>,

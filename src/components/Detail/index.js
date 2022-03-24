@@ -1,60 +1,85 @@
 import React from 'react';
 import './detail.scss';
-import { useParams } from 'react-router-dom';
+import { useData } from '../../hooks/useData';
 
 function Detail() {
-    const { id } = useParams();
+    const project = useData();
 
+    if(!project) return <div id='detail'><h2>데이터가 없습니다.</h2></div>;
+    
     return (
         <div id='detail'>
-            <h2>프로젝트 이름</h2>
+            <h2>{project.name}</h2>
             <div>
-                <img src='../images/music_main.png' alt='project main page'/>
+                <img src={`../images/${project.name}/main.png`} alt='project main page'/>
             </div>
             <div>
-                <h3>프로젝트 소개</h3>
-                <p>프로젝트 설명.........................................</p>
-                <p>
-                    <strong>프로젝트 사용 기술: </strong> 
-                    React, SCSS, .....
-                </p>
-                <p>
-                    <strong>프로젝트 소요기간: </strong>
-                    00일
-                </p>
-                <p>
-                    <strong>프로젝트 기여도: </strong>
-                    100%
-                </p>
-                <p>
+                <h3>프로젝트 개요</h3>
+                <div id='projectDesc'>
+                    {project.desc.map(desc => <p>{desc}</p>)}
+                </div>
+                <ul>
+                    <li>
+                        <strong>프로젝트 사용 기술: </strong>
+                    </li>
+                    <li>
+                        {project.skills}
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>프로젝트 소요기간: </strong>
+                    </li>
+                    <li>
+                        {project.days}일
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>프로젝트 기여도: </strong>
+                    </li>
+                    <li>
+                        100%
+                    </li>
+                </ul>
+                <div>
                     <strong>프로젝트 사이트 주소: </strong>
-                    <a href='https://www.naver.com' target='_blank' rel="noopener noreferrer">https://www.naver.com</a>
-                </p>
-                <p>
+                    <ul>
+                        <li>
+                            <a href={project.site} target='_blank' rel="noopener noreferrer">{project.site}</a>
+                        </li>
+                    </ul>
+                </div>
+                <div> 
                     <strong>프로젝트 깃허브 주소: </strong>
-                    <a href='https://www.google.com' target='_blank' rel="noopener noreferrer">https://www.google.com</a>
-                </p>
+                    <ul>
+                    {
+                        project.github.map(git => (
+                            <li>
+                                <a href={git} target='_blank' rel="noopener  noreferrer">{git}</a>
+                            </li>
+                        ))
+                    }
+                    </ul>
+                </div>
             </div>
             <div>
-                <h3>프로젝트 설명</h3>
-                <div className='desc'>
-                    <p>서버로부터 플레이리스트 목록을 불러 와서 보여줌</p>
-                    <div>
-                        <img src='../images/music1.gif' alt='project desc'/>
-                    </div>
-                </div>
-                <div className='desc'>
-                    <p>서버로부터 플레이리스트 목록을 불러 와서 보여줌</p>
-                    <div>
-                        <img src='../images/music2.gif' alt='project desc'/>
-                    </div>
-                </div>
-                <div className='desc'>
-                    <p>서버로부터 플레이리스트 목록을 불러 와서 보여줌</p>
-                    <div>
-                        <img src='../images/music3.gif' alt='project desc'/>
-                    </div>
-                </div>
+                <h3>프로젝트 세부사항</h3>
+                {
+                    project.functions.map(func => (
+                        <div className='desc' key={func.no}>
+                            <p>
+                                <span>{func.no}. </span>
+                                {func.desc}
+                            </p>
+                            <div>
+                                {func.imgs.map(img => 
+                                    <img key={img} src={`../images/${project.name}/${img}`} alt='project desc'/>
+                                )}
+                            </div>
+                        </div>
+                    ))
+                }
             </div>
         </div>
     );

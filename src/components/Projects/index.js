@@ -12,10 +12,10 @@ function Projects() {
             <div className='sectionContent'>
                 <Carousel interval={null} variant="dark">
                     <Carousel.Item>
-                        <Link to='project/1'>
+                        <Link to='/project/1'>
                             <img
                             className="d-block"
-                            src="images/music_main.png"
+                            src="images/Music/main.png"
                             alt="music main"
                             />
                         </Link>
@@ -25,10 +25,10 @@ function Projects() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <Link to='project/2'>
+                        <Link to='/project/2'>
                             <img
                             className="d-block"
-                            src="images/book_main.png"
+                            src="images/Green Book/main.png"
                             alt="book main"
                             />
                         </Link>
@@ -38,20 +38,20 @@ function Projects() {
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <Link to='project/3'>
+                        <Link to='/project/3'>
                             <img
                             className="d-block"
-                            src="images/bewegen_main.png"
+                            src="images/Bewegen clone/main.png"
                             alt="bewegen main"
                             />
                         </Link>
                         <Carousel.Caption>
                             <h3>Bewegen clone 사이트</h3>
-                            <p>Vanila JavaScript로 구현한 Bewegen 클론 사이트</p>
+                            <p>Vanilla JavaScript로 구현한 Bewegen 클론 사이트</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
-                        <Link to='project/4'>
+                        <Link to='/project/4'>
                             <img
                             className="d-block"
                             src="images/.png"

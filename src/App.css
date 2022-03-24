@@ -45,6 +45,14 @@ nav > ul li::after {
 nav > ul li:hover::after {
   transform: scaleX(1);
 }
+nav > ul li.on::after {
+  transform: scaleX(1);
+}
+
+/* detailHeader */
+#detailNav {
+  width: 40%;
+}
 
 
 /* main */
