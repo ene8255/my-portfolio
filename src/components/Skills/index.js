@@ -3,9 +3,9 @@ import './skills.scss';
 import { IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoJavascript, IoLogoReact, IoLogoNodejs } from "react-icons/io5";
 import { SiPhp, SiMysql, SiAmazonaws, SiGit, SiGithub } from "react-icons/si";
 
-function Skills() {
+function Skills({ skillsRef }) {
     return (
-        <div id='skills' className='divBox'>
+        <div id='skills' className='divBox' ref={skillsRef}>
             <div className='sectionTitle'>
                 <h2>Skills</h2>
             </div>

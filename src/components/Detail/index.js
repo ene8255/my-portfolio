@@ -5,7 +5,7 @@ import { useData } from '../../hooks/useData';
 function Detail() {
     const project = useData();
 
-    if(!project) return <div id='detail'><h2>데이터가 없습니다.</h2></div>;
+    if(!project) return (<div id='detail'><h2>데이터가 없습니다.</h2></div>);
     
     return (
         <div id='detail'>
@@ -16,7 +16,7 @@ function Detail() {
             <div>
                 <h3>프로젝트 개요</h3>
                 <div id='projectDesc'>
-                    {project.desc.map(desc => <p>{desc}</p>)}
+                    {project.desc.map((desc, idx) => <p key={idx}>{desc}</p>)}
                 </div>
                 <ul>
                     <li>
@@ -46,7 +46,9 @@ function Detail() {
                     <strong>프로젝트 사이트 주소: </strong>
                     <ul>
                         <li>
-                            <a href={project.site} target='_blank' rel="noopener noreferrer">{project.site}</a>
+                            <a href={project.site} target='_blank' rel="noopener noreferrer">
+                                {project.site}
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -54,9 +56,11 @@ function Detail() {
                     <strong>프로젝트 깃허브 주소: </strong>
                     <ul>
                     {
-                        project.github.map(git => (
-                            <li>
-                                <a href={git} target='_blank' rel="noopener  noreferrer">{git}</a>
+                        project.github.map((git, idx) => (
+                            <li key={idx}>
+                                <a href={git} target='_blank' rel="noopener noreferrer">
+                                    {git}
+                                </a>
                             </li>
                         ))
                     }

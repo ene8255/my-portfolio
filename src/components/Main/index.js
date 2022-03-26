@@ -4,14 +4,14 @@ import About from '../About';
 import Skills from '../Skills';
 import Projects from '../Projects';
 
-function Main() {
+function Main({ refs }) {
     return (
         <main>
             <div id='main-container'>
                 <Front />
-                <About />
-                <Skills />
-                <Projects />
+                <About aboutRef={refs[0]} />
+                <Skills skillsRef={refs[1]} />
+                <Projects projectsRef={refs[2]} />
             </div>
         </main>
     );
