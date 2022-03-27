@@ -2,9 +2,19 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { useScroll } from '../../hooks/useScroll';
 
-function Header({ handleScroll, refs }) {
+function Header() {
     let scrollY = useScroll();
     const innerH = window.innerHeight;
+
+    const handleScroll = (e) => {
+        if(e.target.id === 'aboutNav') {
+            window.scrollTo(0, innerH);
+        }else if(e.target.id === 'skillsNav') {
+            window.scrollTo(0, innerH * 2);
+        }else {
+            window.scrollTo(0, innerH * 3);
+        }
+    };
 
     return (
         <header>
@@ -12,9 +22,9 @@ function Header({ handleScroll, refs }) {
                 <Link to='/'>Inhye Kim</Link>
             </h1>
             <nav>
-                <ul>
+                <ul onClick={handleScroll}>
                     <li 
-                        onClick={() => handleScroll(refs[0])} 
+                        id='aboutNav'
                         className={scrollY >= (innerH) && scrollY < (1.8 * innerH) ? 
                                     "on" : 
                                     null}
@@ -22,7 +32,7 @@ function Header({ handleScroll, refs }) {
                         About me
                     </li>
                     <li 
-                        onClick={() => handleScroll(refs[1])}
+                        id='skillsNav'
                         className={scrollY >= (1.8 * innerH) && scrollY < (2.8 * innerH) ? 
                                     "on" : 
                                     null}
@@ -30,7 +40,7 @@ function Header({ handleScroll, refs }) {
                         Skills
                     </li>
                     <li 
-                        onClick={() => handleScroll(refs[2])}
+                        id='projectsNav'
                         className={scrollY >= (2.8 * innerH) && scrollY < (3.8 * innerH) ? 
                                     "on" : 
                                     null}

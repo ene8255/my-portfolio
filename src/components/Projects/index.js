@@ -3,9 +3,9 @@ import Carousel from 'react-bootstrap/Carousel';
 import './projects.scss';
 import { Link } from 'react-router-dom';
 
-function Projects({ projectsRef }) {
+function Projects() {
     return (
-        <div id='projects' className='divBox' ref={projectsRef}>
+        <div id='projects' className='divBox'>
             <div className='sectionTitle'>
                 <h2>Projects</h2>
             </div>

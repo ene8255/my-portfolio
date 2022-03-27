@@ -9,9 +9,9 @@ function Main({ refs }) {
         <main>
             <div id='main-container'>
                 <Front />
-                <About aboutRef={refs[0]} />
-                <Skills skillsRef={refs[1]} />
-                <Projects projectsRef={refs[2]} />
+                <About />
+                <Skills />
+                <Projects />
             </div>
         </main>
     );

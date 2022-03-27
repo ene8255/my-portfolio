@@ -2,9 +2,9 @@ import React from 'react';
 import './about.scss';
 import { BsEnvelope, BsGithub } from "react-icons/bs";
 
-function About({ aboutRef }) {
+function About() {
     return (
-        <div id='about' className='divBox' ref={aboutRef}>
+        <div id='about' className='divBox'>
             <div className='sectionTitle'>
                 <h2>About me</h2>
             </div>
