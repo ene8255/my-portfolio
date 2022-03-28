@@ -7,8 +7,8 @@ import Projects from '../Projects';
 function Main({ refs }) {
     return (
         <main>
+            <Front />
             <div id='main-container'>
-                <Front />
                 <About />
                 <Skills />
                 <Projects />

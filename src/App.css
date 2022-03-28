@@ -75,7 +75,10 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 
@@ -84,9 +87,9 @@ main {
   width: 100%;
   height: var(--main-height);
   display: flex;
-  position: sticky;
+  /* position: sticky;
   top: 0;
-  left: 0;
+  left: 0; */
 }
 
 .sectionTitle {

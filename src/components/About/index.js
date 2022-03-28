@@ -9,7 +9,7 @@ function About() {
                 <h2>About me</h2>
             </div>
             <div className='sectionContent'>
-                <div>
+                <div id='intro'>
                     <p>안녕하세요.</p>
                     <p>제 이름은 김인혜라고 합니다.</p>
                     <p>함께 성장하는 좋은 프론트엔드 개발자가 되기 위해<br/> 오늘도 노력 중입니다.</p>
@@ -28,6 +28,9 @@ function About() {
                             </svg>
                         </a>
                     </div>
+                </div>
+                <div id='emoji'>
+                    <img src='images/memoticon.png' alt='미모티콘' />
                 </div>
             </div>
         </div>

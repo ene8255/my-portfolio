@@ -1,6 +1,9 @@
 #front {
+    position: sticky;
+    top: 0;
+    left: 0;
     canvas {
-        background: linear-gradient(to right, #c9ffbf, #ffafbd);
+        background-color: #f7f7f7;
     }
     h2 {
         position: absolute;

@@ -1,10 +1,24 @@
 #about {
-    background-color: #f7f7f7;
+    // background-color: #f7f7f7;
     .sectionContent {
         font-size: 1.3em;
-        > div {
-            padding: 10%;
+        position: relative;
+        // > div {
+        //     padding: 10%;
+        // }
+    }
+    #emoji {
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        right: 2em;
+        transform: translateY(10%);
+        img {
+            width: 100%;
         }
+    }
+    #intro {
+        padding: 10%;
     }
     #email {
         margin-top: 1em;

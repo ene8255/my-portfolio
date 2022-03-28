@@ -4,10 +4,10 @@ import './front.scss';
 function Front() {
     const canvasRef = useRef(null);
 
-    let scaleValue = 1;
-    let rotationValue = 1;
-    let x;
-    let y;
+    let scaleValue = useRef(1);
+    let rotationValue = useRef(1);
+    let x = useRef(null);
+    let y = useRef(null);
 
     function toRadian(deg){
         return deg * Math.PI/180;
@@ -33,63 +33,71 @@ function Front() {
         }
 
         function draw(){ 
+            let grd = context.createLinearGradient(0, 30, 50, 0);
+            grd.addColorStop(0, "#ebbba7");
+            grd.addColorStop(1, "#cfc7f8");
+
             context.save();   // transform 효과 주기전의 상태를 저장
             context.clearRect(0, 0, canvas.width, canvas.height);
             context.setTransform(1, 0, 0, 1, 0, 0);
             context.translate(canvas.width / 2, canvas.height / 2);
-            context.scale(scaleValue, scaleValue);
-            // context.rotate(toRadian(rotationValue));
+            context.scale(scaleValue.current, scaleValue.current);
+            context.fillStyle = grd;
+            // context.rotate(toRadian(rotationValue.current));
             // context.strokeRect(-50, -50, 100, 100);
-            context.arc(0, 0, 50, 0, toRadian(360), true);
+            context.arc(0, 0, 40, 0, toRadian(360), true);
             context.fill();
 
             // context.translate(100, 100);
-            // context.scale(scaleValue, scaleValue);
+            // context.scale(scaleValue.current, scaleValue.current);
             // context.arc(100, 100, 50, 0, toRadian(360), true);
             // context.stroke();
-            scaleValue += 0.1;
-            rotationValue += 2;
-            if(scaleValue < 13) {
+            scaleValue.current += 0.1;
+            rotationValue.current += 2;
+            if(scaleValue.current < 13) {
                 requestAnimationFrame(draw);
             }
     
             context.restore();   // 이전의 상태로 되돌려줌
-            writeText({ text: 'Portfolio!', x: canvas.width / 2, y: canvas.height / 2 });
+            // writeText({ text: 'Portfolio!', x: canvas.width / 2, y: canvas.height / 2 });
         }
 
         draw();
     }, []);
 
-    useEffect(() => {
-        const canvas = canvasRef.current;
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        let draw = true;
+    // useEffect(() => {
+    //     const canvas = canvasRef.current;
+    //     canvas.width = window.innerWidth;
+    //     canvas.height = window.innerHeight;
+    //     let draw = true;
 
-        canvas.addEventListener('mousemove', function(e){
-            if(draw) {
-                let ctx = canvas.getContext('2d');
-                ctx.globalCompositeOperation = 'destination-out';
-                ctx.beginPath();
-                // ctx.moveTo(e.pageX, e.pageY);
-                // ctx.fillStyle = 'transparent';
-                ctx.arc(x, y, 40, 0, toRadian(360), true);
-                // ctx.clearRect(x, y, 50, 50);
-                // ctx.lineTo(x, y);
-                ctx.fill();
-                x = e.pageX;
-                y = e.pageY;
-            }
-        })
-        // return (
-        //     draw = false
-        // )
-    }, [])
+    //     canvas.addEventListener('mousemove', function(e){
+    //         if(draw) {
+    //             let ctx = canvas.getContext('2d');
+    //             // ctx.globalCompositeOperation = 'destination-out';
+    //             ctx.beginPath();
+    //             // ctx.moveTo(x.current + 10, y.current);
+    //             // ctx.strokeStyle = '#F8FFAE';
+    //             ctx.moveTo(e.pageX, e.pageY);
+    //             // ctx.fillStyle = 'transparent';
+    //             // ctx.arc(x.current, y.current, 10, 0, toRadian(360), true);
+    //             // ctx.lineTo(x, y);
+    //             // ctx.fillStyle = '#F8FFAE';
+    //             ctx.fillText('😆', e.pageX, e.pageY);
+    //             ctx.stroke();
+    //             // x.current = e.pageX;
+    //             // y.current = e.pageY;
+    //         }
+    //     })
+    //     // return (
+    //     //     draw = false
+    //     // )
+    // }, [])
 
     return (
         <div id='front' className='divBox'>
             <canvas ref={canvasRef}></canvas>
-            <h2>Inhye's Portfolio</h2>
+            {/* <h2>Inhye's Portfolio</h2> */}
         </div>
     );
 }
