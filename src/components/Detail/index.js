@@ -1,8 +1,13 @@
 import React from 'react';
+import { FaArrowUp } from "react-icons/fa";
 import './detail.scss';
 import { useData } from '../../hooks/useData';
 
 function Detail() {
+    const handleClick = () => {
+        window.scrollTo(0, 0);
+    }
+    
     const project = useData();
 
     if(!project) return (<div id='detail'><h2>데이터가 없습니다.</h2></div>);
@@ -12,6 +17,9 @@ function Detail() {
             <h2>{project.name}</h2>
             <div>
                 <img src={`../images/${project.name}/main.png`} alt='project main page'/>
+            </div>
+            <div id='upBtn' onClick={handleClick}>
+                <FaArrowUp />
             </div>
             <div>
                 <h3>프로젝트 개요</h3>

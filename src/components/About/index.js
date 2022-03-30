@@ -1,13 +1,12 @@
 import React from 'react';
 import './about.scss';
+import SectionTitle from '../include/SectionTitle';
 import { BsEnvelope, BsGithub } from "react-icons/bs";
 
 function About() {
     return (
         <div id='about' className='divBox'>
-            <div className='sectionTitle'>
-                <h2>About me</h2>
-            </div>
+            <SectionTitle title='About me' />
             <div className='sectionContent'>
                 <div id='intro'>
                     <p>안녕하세요.</p>

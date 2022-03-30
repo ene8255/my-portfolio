@@ -17,6 +17,24 @@
     }
 }
 
+#upBtn {
+    position: fixed;
+    bottom: 2em;
+    right: 3em;
+    background-color: #fff;
+    width: 3em;
+    height: 3em;
+    border-radius: 50%;
+    line-height: 2.5em;
+    box-shadow: 2px 3px 5px #999;
+    transition: 0.5s;
+    cursor: pointer;
+    &:hover {
+        transform: translateY(-10%);
+        background-color: darken($color: #fff, $amount: 8%);
+    }
+}
+
 #projectDesc {
     width: 40%;
     margin: 0 auto;

@@ -1,14 +1,13 @@
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './projects.scss';
+import SectionTitle from '../include/SectionTitle';
 import { Link } from 'react-router-dom';
 
 function Projects() {
     return (
         <div id='projects' className='divBox'>
-            <div className='sectionTitle'>
-                <h2>Projects</h2>
-            </div>
+            <SectionTitle title='Projects' />
             <div className='sectionContent'>
                 <Carousel interval={null} variant="dark">
                     <Carousel.Item>

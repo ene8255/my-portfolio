@@ -1,14 +1,13 @@
 import React from 'react';
 import './skills.scss';
+import SectionTitle from '../include/SectionTitle';
 import { IoLogoHtml5, IoLogoCss3, IoLogoSass, IoLogoJavascript, IoLogoReact, IoLogoNodejs } from "react-icons/io5";
 import { SiPhp, SiMysql, SiAmazonaws, SiGit, SiGithub } from "react-icons/si";
 
 function Skills() {
     return (
         <div id='skills' className='divBox'>
-            <div className='sectionTitle'>
-                <h2>Skills</h2>
-            </div>
+            <SectionTitle title='Skills' />
             <div className='sectionContent'>
                 <div id='skillCont'>
                     <div>

@@ -1,18 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useScroll } from '../../hooks/useScroll';
+import { RiSunLine, RiMoonClearLine } from "react-icons/ri";
 
-function Header() {
+function Header({ isDarkModeOn, toggleDarkMode }) {
     let scrollY = useScroll();
     const innerH = window.innerHeight;
 
     const handleScroll = (e) => {
         if(e.target.id === 'aboutNav') {
-            window.scrollTo(0, innerH);
+            window.scrollTo(0, 0);
         }else if(e.target.id === 'skillsNav') {
+            window.scrollTo(0, innerH);
+        }else if(e.target.id === 'projectsNav') {
             window.scrollTo(0, innerH * 2);
-        }else {
-            window.scrollTo(0, innerH * 3);
         }
     };
 
@@ -25,27 +26,30 @@ function Header() {
                 <ul onClick={handleScroll}>
                     <li 
                         id='aboutNav'
-                        className={scrollY >= (innerH) && scrollY < (1.8 * innerH) ? 
-                                    "on" : 
-                                    null}
+                        className={scrollY >= 0 && scrollY < (0.8 * innerH) ? 
+                                    "hoverEffect on" : 
+                                    "hoverEffect"}
                     >
                         About me
                     </li>
                     <li 
                         id='skillsNav'
-                        className={scrollY >= (1.8 * innerH) && scrollY < (2.8 * innerH) ? 
-                                    "on" : 
-                                    null}
+                        className={scrollY >= (0.8 * innerH) && scrollY < (1.8 * innerH) ? 
+                                    "hoverEffect on" : 
+                                    "hoverEffect"}
                     >
                         Skills
                     </li>
                     <li 
                         id='projectsNav'
-                        className={scrollY >= (2.8 * innerH) && scrollY < (3.8 * innerH) ? 
-                                    "on" : 
-                                    null}
+                        className={scrollY >= (1.8 * innerH) && scrollY < (2.8 * innerH) ? 
+                                    "hoverEffect on" : 
+                                    "hoverEffect"}
                     >
                         Projects
+                    </li>
+                    <li onClick={toggleDarkMode}>
+                        {isDarkModeOn ? <RiMoonClearLine /> : <RiSunLine />}
                     </li>
                 </ul>
             </nav>

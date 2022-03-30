@@ -20,7 +20,7 @@ function DetailHeader() {
                         data.projects.map(project => (
                             <li 
                                 key={project.id} 
-                                className={numId === project.id ? "on" : null}
+                                className={numId === project.id ? "hoverEffect on" : "hoverEffect"}
                             >
                                 <Link to={`/project/${project.id}`}>{project.name}</Link>
                             </li>

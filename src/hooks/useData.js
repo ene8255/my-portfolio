@@ -6,12 +6,13 @@ export function useData() {
     const [ project, setProject ] = useState(null);
 
     const { id } = useParams();
+    const numId = Number(id);
 
     useEffect(() => {
         data.projects.map(project => {
-            project.id == id && setProject(project);
+            return project.id === numId && setProject(project);
         })
-    }, [id, project]);
+    }, [numId, project]);
 
     return project;
 }
