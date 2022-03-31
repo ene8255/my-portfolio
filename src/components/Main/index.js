@@ -4,10 +4,10 @@ import About from '../About';
 import Skills from '../Skills';
 import Projects from '../Projects';
 
-function Main() {
+function Main({ isDarkModeOn }) {
     return (
         <main>
-            <Front />
+            <Front isDarkModeOn={isDarkModeOn} />
             <div id='main-container'>
                 <About />
                 <Skills />

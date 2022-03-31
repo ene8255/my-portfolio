@@ -30,7 +30,7 @@ function App() {
           <Route path='/project/:id' element={<DetailHeader />} />
         </Routes>
         <Routes>
-          <Route path='/' element={<Main />} />
+          <Route path='/' element={<Main isDarkModeOn={isDarkModeOn} />} />
           <Route path='/project/:id' element={<Detail/>} />
         </Routes>
       </div>

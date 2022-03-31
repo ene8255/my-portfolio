@@ -1,7 +1,15 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 import './front.scss';
+import styled from 'styled-components';
 
-function Front() {
+const Canvas = styled.canvas`
+    background-color: ${({theme}) => theme.bgColor}
+`;
+
+function Front({ isDarkModeOn }) {
+    const [ color0, setColor0 ] = useState('#ebbba7');
+    const [ color1, setColor1 ] = useState('#cfc7f8');
+
     const canvasRef = useRef(null);
 
     let scaleValue = useRef(1);
@@ -12,6 +20,16 @@ function Front() {
     function toRadian(deg){
         return deg * Math.PI/180;
     }
+    
+    useEffect(() => {
+        if(isDarkModeOn) {
+            setColor0('#457fca');
+            setColor1('#5691c8');
+        } else {
+            setColor0('#ebbba7');
+            setColor1('#cfc7f8');
+        }
+    }, [isDarkModeOn]);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -34,8 +52,8 @@ function Front() {
 
         function draw(){ 
             let grd = context.createLinearGradient(0, 30, 50, 0);
-            grd.addColorStop(0, "#ebbba7");
-            grd.addColorStop(1, "#cfc7f8");
+            grd.addColorStop(0, color0);
+            grd.addColorStop(1, color1);
 
             context.save();   // transform 효과 주기전의 상태를 저장
             context.clearRect(0, 0, canvas.width, canvas.height);
@@ -63,7 +81,7 @@ function Front() {
         }
 
         draw();
-    }, []);
+    }, [color0, color1]);
 
     // useEffect(() => {
     //     const canvas = canvasRef.current;
@@ -96,7 +114,7 @@ function Front() {
 
     return (
         <div id='front' className='divBox'>
-            <canvas ref={canvasRef}></canvas>
+            <Canvas ref={canvasRef}></Canvas>
             {/* <h2>Inhye's Portfolio</h2> */}
         </div>
     );

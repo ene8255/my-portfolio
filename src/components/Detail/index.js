@@ -1,7 +1,13 @@
 import React from 'react';
 import { FaArrowUp } from "react-icons/fa";
 import './detail.scss';
+import styled from 'styled-components';
 import { useData } from '../../hooks/useData';
+
+const DetailDiv = styled.div`
+    background: ${({ theme }) => theme.detailBg};
+    box-shadow: 0px 0px 30px 20px ${({ theme }) => theme.detailBox};
+`;
 
 function Detail() {
     const handleClick = () => {
@@ -13,7 +19,7 @@ function Detail() {
     if(!project) return (<div id='detail'><h2>데이터가 없습니다.</h2></div>);
     
     return (
-        <div id='detail'>
+        <DetailDiv id='detail'>
             <h2>{project.name}</h2>
             <div>
                 <img src={`../images/${project.name}/main.png`} alt='project main page'/>
@@ -93,7 +99,7 @@ function Detail() {
                     ))
                 }
             </div>
-        </div>
+        </DetailDiv>
     );
 }
 

@@ -1,7 +1,12 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link, useParams } from 'react-router-dom';
 import data from '../../data/data.json';
 import { useScroll } from '../../hooks/useScroll';
+
+const DHeader = styled.header`
+    background-color: ${({ theme }) => theme.detailBox};
+`;
 
 function DetailHeader() {
     const { id } = useParams();
@@ -10,7 +15,7 @@ function DetailHeader() {
     let scrollY = useScroll();
     
     return (
-        <header className={ scrollY > 30 ? 'on' : null }>
+        <DHeader className={ scrollY > 30 ? 'on' : null }>
             <h1>
                 <Link to='/'>Inhye Kim</Link>
             </h1>
@@ -28,7 +33,7 @@ function DetailHeader() {
                     }
                 </ul>
             </nav>
-        </header>
+        </DHeader>
     );
 }
 

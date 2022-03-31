@@ -5,6 +5,7 @@ const STitle = styled.div`
     &:after {
         background-color: ${({ theme }) => theme.bgColor};
         border: ${({ theme }) => theme.border};
+        mix-blend-mode: ${({ theme }) => theme.mixBlend};
     }
 `;
 

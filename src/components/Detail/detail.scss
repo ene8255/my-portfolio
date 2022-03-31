@@ -1,7 +1,5 @@
 #detail {
-    background: linear-gradient(#e0eafc, #cfdef3);
     text-align: center;
-    box-shadow: 0px 0px 30px 20px #e0eafc;
     min-height: 100vh;
     h2 {
         margin-top: 3em;
@@ -22,6 +20,7 @@
     bottom: 2em;
     right: 3em;
     background-color: #fff;
+    color: #222;
     width: 3em;
     height: 3em;
     border-radius: 50%;
@@ -31,7 +30,7 @@
     cursor: pointer;
     &:hover {
         transform: translateY(-10%);
-        background-color: darken($color: #fff, $amount: 8%);
+        background-color: darken($color: #fff, $amount: 5%);
     }
 }
 
