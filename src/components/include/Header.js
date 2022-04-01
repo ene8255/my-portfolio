@@ -5,8 +5,10 @@ import { RiSunLine, RiMoonClearLine } from "react-icons/ri";
 
 function Header({ isDarkModeOn, toggleDarkMode }) {
     let scrollY = useScroll();
+
     const innerH = window.innerHeight;
 
+    // nav 메뉴 클릭시 각 섹션의 위치로 이동하게 하는 함수
     const handleScroll = (e) => {
         if(e.target.id === 'aboutNav') {
             window.scrollTo(0, 0);

@@ -11,7 +11,7 @@ function Main({ isDarkModeOn }) {
             <div id='main-container'>
                 <About />
                 <Skills />
-                <Projects />
+                <Projects isDarkModeOn={isDarkModeOn} />
             </div>
         </main>
     );

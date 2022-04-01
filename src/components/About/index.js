@@ -1,7 +1,14 @@
 import React from 'react';
-import './about.scss';
-import SectionTitle from '../include/SectionTitle';
 import { BsEnvelope, BsGithub } from "react-icons/bs";
+import './about.scss';
+import styled from 'styled-components';
+import SectionTitle from '../include/SectionTitle';
+
+const LinkDiv = styled.div`
+    svg {
+        fill: ${({theme}) => theme.color};
+    }
+`;
 
 function About() {
     return (
@@ -16,7 +23,7 @@ function About() {
                         <BsEnvelope/> 
                         <span>ene8255@gmail.com</span>
                     </p>
-                    <div id='links'>
+                    <LinkDiv id='links'>
                         <a href='https://github.com/ene8255' target='_blank' rel="noopener noreferrer">
                             <BsGithub/>
                         </a>
@@ -26,10 +33,10 @@ function About() {
                                 <g><path d="M229.5,0C102.75,0,0,102.75,0,229.5S102.75,459,229.5,459,459,356.25,459,229.5,356.25,0,229.5,0ZM130.21,191.45a39.57,39.57,0,1,1,39.56-39.57A39.58,39.58,0,0,1,130.21,191.45ZM229.5,390a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,390Zm0-99.29a39.56,39.56,0,1,1,39.56-39.56A39.56,39.56,0,0,1,229.5,290.74Zm0-99.29a39.57,39.57,0,1,1,39.56-39.57A39.57,39.57,0,0,1,229.5,191.45Zm99.29,0a39.57,39.57,0,1,1,39.57-39.57A39.57,39.57,0,0,1,328.79,191.45Z"/></g>
                             </svg>
                         </a>
-                    </div>
+                    </LinkDiv>
                 </div>
                 <div id='emoji'>
-                    <img src='images/memoticon.png' alt='미모티콘' />
+                    <img src='images/memoticon.png' alt='memoji' />
                 </div>
             </div>
         </div>

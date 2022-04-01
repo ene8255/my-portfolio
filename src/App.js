@@ -15,10 +15,11 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
-  const [ isDarkModeOn, setDarkMode ] = useState(false);
+  const [ isDarkModeOn, setIsDarkModeOn ] = useState(false);
 
+  // isDarkModeOn의 상태를 바꿔주는 함수
   const toggleDarkMode = () => {
-    setDarkMode(!isDarkModeOn);
+    setIsDarkModeOn(!isDarkModeOn);
   }
 
   return (
@@ -31,7 +32,7 @@ function App() {
         </Routes>
         <Routes>
           <Route path='/' element={<Main isDarkModeOn={isDarkModeOn} />} />
-          <Route path='/project/:id' element={<Detail/>} />
+          <Route path='/project/:id' element={<Detail />} />
         </Routes>
       </div>
     </ThemeProvider>

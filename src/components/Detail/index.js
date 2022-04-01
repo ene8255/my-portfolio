@@ -1,8 +1,8 @@
 import React from 'react';
+import { useData } from '../../hooks/useData';
 import { FaArrowUp } from "react-icons/fa";
 import './detail.scss';
 import styled from 'styled-components';
-import { useData } from '../../hooks/useData';
 
 const DetailDiv = styled.div`
     background: ${({ theme }) => theme.detailBg};
@@ -10,6 +10,7 @@ const DetailDiv = styled.div`
 `;
 
 function Detail() {
+    // 스크롤 위치를 맨위로 올려주는 함수
     const handleClick = () => {
         window.scrollTo(0, 0);
     }

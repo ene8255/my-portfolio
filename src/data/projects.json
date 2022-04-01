@@ -115,7 +115,8 @@
         },
         {
             "id": 4,
-            "name": "Inhye's Portfolio"
+            "name": "Inhye's Portfolio",
+            "desc": ["React로 생성한 포트폴리오 사이트"]
         }
     ]
 }

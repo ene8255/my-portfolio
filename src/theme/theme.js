@@ -1,3 +1,4 @@
+// 라이트모드 theme
 export const lightTheme = {
     color: "#222",
     bgColor: '#f7f7f7',
@@ -7,6 +8,7 @@ export const lightTheme = {
     detailBox: '#e0eafc',
 };
 
+// 다크모드 theme
 export const darkTheme = {
     color: "#fff",
     bgColor: '#2b2a33',
