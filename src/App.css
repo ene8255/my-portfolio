@@ -83,10 +83,6 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  /* background-color: #f7f7f7; */
-  /* position: sticky;
-  top: 0;
-  left: 0; */
 }
 
 
@@ -113,8 +109,6 @@ main {
   position: absolute;
   top: 0;
   left: 0;
-  /* background-color: #f7f7f7;
-  border: 1px solid #333; */
 }
 
 .sectionTitle h2 {

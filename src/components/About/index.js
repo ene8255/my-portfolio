@@ -11,6 +11,10 @@ const LinkDiv = styled.div`
 `;
 
 function About() {
+    const handleMouseOver = (e) => {
+        e.target.src = 'images/memoji2.png';
+    }
+
     return (
         <div id='about' className='divBox'>
             <SectionTitle title='About me' />
@@ -36,7 +40,7 @@ function About() {
                     </LinkDiv>
                 </div>
                 <div id='emoji'>
-                    <img src='images/memoticon.png' alt='memoji' />
+                    <img src='images/memoji1.png' alt='memoji' onMouseOver={handleMouseOver} />
                 </div>
             </div>
         </div>
