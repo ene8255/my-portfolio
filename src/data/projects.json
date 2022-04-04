@@ -93,7 +93,7 @@
             "functions": [
                 {
                     "no": 1,
-                    "desc": "JavaScript를 이용하여 scrollTop이 특정 위치에 도달하면, 마우스휠 또는 버튼 클릭으로 제어할 수 있는 캐러셀 슬라이더가 나타납니다. 슬라이더가 끝에 도달하거나 Skip 버튼을 클릭하면 다음 섹션으로 넘어갈 수 있습니다.",
+                    "desc": "JavaScript를 이용하여 scrollTop이 특정 위치에 도달하면, 마우스휠 또는 버튼 클릭으로 제어할 수 있는 캐러셀 슬라이더가 나타납니다.\\n 슬라이더가 끝에 도달하거나 Skip 버튼을 클릭하면 다음 섹션으로 넘어갈 수 있습니다.",
                     "imgs": ["bewegen3.gif"]
                 },
                 {
@@ -116,7 +116,28 @@
         {
             "id": 4,
             "name": "Inhye's Portfolio",
-            "desc": ["React로 생성한 포트폴리오 사이트"]
+            "desc": ["React로 생성한 포트폴리오 사이트", "조금 단순하게 보일 수 있는 페이지 구성이지만, 불필요한 내용은 최대한 줄이고 깔끔한 사이트를 만들기 위해 노력했습니다."],
+            "skills": "React, SCSS, ",
+            "days": "12",
+            "site": "--",
+            "github": ["https://github.com/ene8255/my-portfolio"],
+            "functions": [
+                {
+                    "no": 1,
+                    "desc": "---",
+                    "imgs": ["portfolio1.gif"]
+                },
+                {
+                    "no": 2,
+                    "desc": "---",
+                    "imgs": ["portfolio2.gif"]
+                },
+                {
+                    "no": 3,
+                    "desc": "---",
+                    "imgs": ["portfolio3.gif"]
+                }
+            ]
         }
     ]
 }
