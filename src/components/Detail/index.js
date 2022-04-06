@@ -23,7 +23,7 @@ function Detail() {
         <DetailDiv id='detail'>
             <h2>{project.name}</h2>
             <div>
-                <img src={`../images/${project.name}/main.png`} alt='project main page'/>
+                <img src={`../images/${project.name}/main.png`} alt='project main page' />
             </div>
             <div id='upBtn' onClick={handleClick}>
                 <FaArrowUp />
@@ -31,7 +31,11 @@ function Detail() {
             <div>
                 <h3>프로젝트 개요</h3>
                 <div id='projectDesc'>
-                    {project.desc.map((desc, idx) => <p key={idx}>{desc}</p>)}
+                    {
+                        project.desc.map((desc, idx) => 
+                            <p key={idx}>{desc}</p>
+                        )
+                    }
                 </div>
                 <ul>
                     <li>
@@ -57,19 +61,20 @@ function Detail() {
                         100%
                     </li>
                 </ul>
-                <div>
-                    <strong>프로젝트 사이트 주소: </strong>
-                    <ul>
-                        <li>
-                            <a href={project.site} target='_blank' rel="noopener noreferrer">
-                                {project.site}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div> 
-                    <strong>프로젝트 깃허브 주소: </strong>
-                    <ul>
+                <ul>
+                    <li>
+                        <strong>프로젝트 사이트 주소: </strong>
+                    </li>
+                    <li>
+                        <a href={project.site} target='_blank' rel="noopener noreferrer">
+                            {project.site}
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <strong>프로젝트 깃허브 주소: </strong>
+                    </li>
                     {
                         project.github.map((git, idx) => (
                             <li key={idx}>
@@ -79,8 +84,7 @@ function Detail() {
                             </li>
                         ))
                     }
-                    </ul>
-                </div>
+                </ul>
             </div>
             <div>
                 <h3>프로젝트 세부사항</h3>
