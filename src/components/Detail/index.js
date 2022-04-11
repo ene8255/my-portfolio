@@ -22,9 +22,21 @@ function Detail() {
     return (
         <DetailDiv id='detail'>
             <h2>{project.name}</h2>
-            <div>
-                <img src={`../images/${project.name}/main.png`} alt='project main page' />
-            </div>
+            {
+                project.responsive ?
+                (
+                    <div id='responsive'>
+                        <img src={`../images/${project.name}/main.png`} alt='project main page' />
+                        <img src={`../images/${project.name}/tablet.png`} alt='project main tablet' />
+                        <img src={`../images/${project.name}/phone.png`} alt='project main phone' />
+                    </div>
+                ) :
+                (
+                    <div>
+                        <img src={`../images/${project.name}/main.png`} alt='project main page' />
+                    </div>
+                )
+            }
             <div id='upBtn' onClick={handleClick}>
                 <FaArrowUp />
             </div>
@@ -97,7 +109,11 @@ function Detail() {
                             </p>
                             <div>
                                 {func.imgs.map(img => 
-                                    <img key={img} src={`../images/${project.name}/${img}`} alt='project desc'/>
+                                    <img 
+                                        key={img} 
+                                        src={`../images/${project.name}/${img}`} 
+                                        alt='project desc'
+                                    />
                                 )}
                             </div>
                         </div>

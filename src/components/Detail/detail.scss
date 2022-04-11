@@ -14,7 +14,25 @@
         margin-bottom: 1.5em;
     }
     ul {
-        margin-left: 0;
+        padding-left: 0;
+    }
+}
+
+#responsive {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    img {
+        &:first-child {
+            width: 50%;
+        }
+        &:nth-child(2) {
+            width: 25%;
+        }
+        &:last-child {
+            width: 20%;
+        }
     }
 }
 
