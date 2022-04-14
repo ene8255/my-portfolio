@@ -9,7 +9,7 @@ import Restoration from './Restoration';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter basename='/my-portfolio'>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Restoration />
       <App />
     </BrowserRouter>

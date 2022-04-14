@@ -123,7 +123,7 @@
             "desc": ["React로 생성한 포트폴리오 사이트", "조금 단순한 페이지 구성으로 불필요한 내용은 최대한 줄이고 깔끔한 포트폴리오 사이트를 만들어 보았습니다."],
             "skills": "React, SCSS",
             "days": "12",
-            "site": "--",
+            "site": "https://ene8255.github.io/my-portfolio/",
             "github": ["https://github.com/ene8255/my-portfolio"],
             "functions": [
                 {
