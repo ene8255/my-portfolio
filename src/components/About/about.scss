@@ -1,17 +1,7 @@
 #about {
     .sectionContent {
-        font-size: 1.3em;
+        font-size: 1.5em;
         position: relative;
-    }
-    #emoji {
-        width: 25%;
-        position: absolute;
-        top: 50%;
-        right: 2em;
-        transform: translateY(10%);
-        img {
-            width: 100%;
-        }
     }
     #intro {
         padding: 10%;
@@ -34,6 +24,16 @@
             &:hover {
                 fill: skyblue;
             }
+        }
+    }
+    #emoji {
+        width: 25%;
+        position: absolute;
+        top: 50%;
+        right: 2em;
+        transform: translateY(10%);
+        img {
+            width: 100%;
         }
     }
 }

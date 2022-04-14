@@ -52,7 +52,7 @@ function Front({ isDarkModeOn }) {
             context.fill();
 
             scaleValue.current += 0.1;
-            if(scaleValue.current < 13) {
+            if(scaleValue.current < 14) {
                 requestAnimationFrame(draw);
             }
     

@@ -23,8 +23,8 @@ $github: #181717;
         div {
             padding: 0.9em;
             svg {
-                width: 4em;
-                height: 4em;
+                width: 4.5em;
+                height: 4.5em;
                 transition: 0.3s;
             }
             &:first-child:hover svg, &:first-child .skillName {
@@ -74,20 +74,23 @@ $github: #181717;
             bottom: 70%;
             right: 50%;
             transform: translateX(50%);
-            font-size: 1.5em;
+            font-size: 1.8em;
             font-weight: bold;
             display: none;
             text-shadow: -1px 0 #243b55, 0 1px #243b55, 1px 0 #243b55, 0 -1px #243b55;
         }
         .skillDesc {
+            font-size: 1.1em;
+            padding-left: 0;
             position: absolute;
             top: 70%;
             right: 50%;
             transform: translateX(50%);
-            min-width: 55%;
+            // min-width: 55%;
             display: none;
             li {
                 list-style: circle;
+                margin-bottom: 0.3em;
             }
         }
     }

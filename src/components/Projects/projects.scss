@@ -4,6 +4,8 @@
     }
     .carousel {
         width: 90%;
+        font-weight: bold;
+        font-size: 1.1em;
         .carousel-item {
             height: 60vh;
             position: relative;
@@ -11,9 +13,13 @@
                 position: absolute;
                 top: 10%;
                 left: 50%;
-                transform: translateX(-50%);
+                transform: translate(-50%, -10%);
                 width: 60%;
+                border: 1px solid #333;
             }
+        }
+        .carousel-caption {
+            margin-bottom: 3%;
         }
     }
 }
