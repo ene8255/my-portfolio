@@ -10,7 +10,7 @@
 ### Inhye's Portfolio site
 ---
 - 프로젝트 소요기간: 12일
-- 사이트 주소: 
+- 사이트 주소: https://ene8255.github.io/my-portfolio/
 ---
 - React로 만든 포트폴리오 사이트
 
