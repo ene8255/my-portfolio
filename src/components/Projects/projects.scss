@@ -23,3 +23,23 @@
         }
     }
 }
+
+@media screen and (max-width: 1400px) {
+    #projects {
+        .carousel {
+            .carousel-item {
+                height: 55vh;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #projects {
+        .carousel {
+            .carousel-item {
+                height: 50vh;
+            }
+        }
+    }
+}
