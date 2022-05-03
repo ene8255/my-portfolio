@@ -95,3 +95,43 @@ $github: #181717;
         }
     }
 }
+
+@media screen and (max-width: 768px) {
+    #skills {
+        #skillCont {
+            .skillName {
+                bottom: 56%;
+            }
+            .skillDesc {
+                top: 75%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 425px) {
+    #skills {
+        #skillCont {
+            .skillName {
+                bottom: 55%;
+            }
+            .skillDesc {
+                top: 72%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #skills {
+        #skillCont {
+            .skillName {
+                bottom: 58%;
+            }
+            .skillDesc {
+                top: 77%;
+                min-width: 75%;
+            }
+        }
+    }
+}
