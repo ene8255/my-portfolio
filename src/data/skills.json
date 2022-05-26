@@ -43,7 +43,7 @@
         {
             "id": 8,
             "name": "AWS",
-            "lists": ["Amazon RDS를 사용하여 MySQL 데이터베이스를 구축하고 활용할 수 있습니다."] 
+            "lists": ["Amazon RDS를 사용하여 MySQL 데이터베이스를 구축하고 활용할 수 있습니다.", "Amazon S3 bucket을 생성하고, Node.js 서버에서 활용할 수 있습니다."] 
         },
         {
             "id": 9,
