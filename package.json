@@ -5,18 +5,18 @@
   "homepage": "https://ene8255.github.io/my-portfolio",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.4.0",
+    "@testing-library/react": "^14.0.0",
     "@testing-library/user-event": "^14.4.3",
     "bootstrap": "^5.2.3",
     "nth-check": "^2.1.1",
     "react": "^18.2.0",
-    "react-bootstrap": "^2.6.0",
+    "react-bootstrap": "^2.7.4",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.7.1",
-    "react-router-dom": "^6.4.4",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.11.0",
     "react-scripts": "5.0.1",
-    "styled-components": "^5.3.6",
-    "web-vitals": "^3.1.0"
+    "styled-components": "^5.3.10",
+    "web-vitals": "^3.3.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -45,9 +45,9 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^4.0.0",
-    "mini-css-extract-plugin": "^2.7.2",
-    "sass": "^1.56.1",
-    "sass-loader": "^13.2.0"
+    "gh-pages": "^5.0.0",
+    "mini-css-extract-plugin": "^2.7.5",
+    "sass": "^1.62.1",
+    "sass-loader": "^13.2.2"
   }
 }
